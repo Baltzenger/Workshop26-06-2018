@@ -35,7 +35,7 @@ echo '';
                 </div>
                 <div id="knowledge">
                     <span class="value"></span>
-                    <span>Connaissances</span>
+                    <span>Connaissances </span>
                 </div>
             </div>
         </div>
