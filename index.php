@@ -6,14 +6,15 @@ echo '<!DOCTYPE html>
     <meta charset="UTF-8">
     <title>Acceuil</title>
     <link rel="stylesheet" type="text/css" href="public/style.css">
+    <link rel="stylesheet" type="text/css" href="public/bootstrap.css">
 </head>
     <body>
-        <div id="content">
-            <?php require (\'menu.php\') ?>
-            <div id="banner">
-            </div>
+        <?php require (\'menu.php\') ?>
+        <div id="banner">
+        </div>
+         <div id="content">
             <div>
-                <h1>Notre plateforme, notre concept</h1>
+                <h1 id="notrePlateforme">Notre plateforme, notre concept</h1>
                 <p>Learn2Share est une plateforme d\'enseignemment collaborative qui part du principe que tout le
                     monde à des connaissances et qu\'elles méritent d\'être partagées.<br/> C\'est donc ici que VOUS
                     intervennez !
