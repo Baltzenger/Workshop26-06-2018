@@ -17,10 +17,10 @@ unset ($login);
  
 <div id="content">
   <div class="card">
-  		<img src="public/Sabiel.jpg" style="width:25%"></img>
+  		<img src="public/avatar.png" style="width:25%"></img>
       <div class="w3-container">
   			<p> Nouvel Arrivant</p>
-  			<br>Username: <?php echo $_POST["login"];?></br> 
+  			<br>Username></br> 
   			<p> Nb Coinmunity Restants </p> 	
 		</div>
 	</div>
