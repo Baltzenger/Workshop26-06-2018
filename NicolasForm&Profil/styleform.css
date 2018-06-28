@@ -1,0 +1,35 @@
+
+.champform{
+
+flex-direction:column;
+background-color:#6666ff;
+padding-bottom:16px;
+font-style:italic;
+font-size:25px;
+
+
+}
+
+html{
+
+	height:100%;
+	width:100%;
+}
+
+body{
+	min-height:100%;
+	position:relative;
+}
+
+footer{
+	width:110%;
+	position:absolute;
+	bottom:0;
+}
+
+.pieddepage{
+
+	align-content:bottom;
+	background-color:#6666ff;
+
+}
