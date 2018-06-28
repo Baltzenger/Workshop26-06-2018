@@ -1,4 +1,5 @@
-<?$login = 'test';
+<?php
+$login = 'test';
 var_dump(isset($login)); // TRUE
 unset ($login);
 

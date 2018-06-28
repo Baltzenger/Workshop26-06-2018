@@ -1,18 +1,7 @@
-<?php
-
-echo '<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Acceuil</title>
-    <link rel="stylesheet" type="text/css" href="public/style.css">
-    <link rel="stylesheet" type="text/css" href="public/bootstrap.css">
-</head>
-    <body>
-        <?php require (\'menu.php\') ?>
+        <?php require('menu.php') ?>
         <div id="banner">
         </div>
-         <div id="content">
+        <div id="content">
             <div>
                 <h1 id="notrePlateforme">Notre plateforme, notre concept</h1>
                 <p>Learn2Share est une plateforme d\'enseignemment collaborative qui part du principe que tout le
@@ -40,4 +29,3 @@ echo '<!DOCTYPE html>
         </div>
     </body>
 </html>
-';

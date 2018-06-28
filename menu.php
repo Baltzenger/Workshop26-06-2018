@@ -1,5 +1,4 @@
 <?php
- header('Content-Type: application/json');
 
  try {
      $pdo = new PDO('mysql:host=localhost;port=3306;','root', '');
@@ -10,4 +9,14 @@
      $retour["message"] = "Connexion à la base échouée";
  }
 
- echo json_encode($retour);;
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Acceuil</title>
+        <link rel="stylesheet" type="text/css" href="public/style.css">
+        <link rel="stylesheet" type="text/css" href="public/w3.css">
+        <script>console.log(<?php json_encode($retour)?>)</script>
+    </head>
+    <body>

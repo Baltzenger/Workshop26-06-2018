@@ -5,6 +5,7 @@ html, body {
 #content {
     margin-left: 350px;
     margin-right: 350px;
+    padding-top: 20px;
     background-color: #b8b8b8;
     box-shadow: 10px 0 15px darkgray;
 }
@@ -14,7 +15,7 @@ html, body {
 }
 
 h1 {
-    margin-left: 30px;
+    margin-left: 30px !important;
 }
 
 #banner {
