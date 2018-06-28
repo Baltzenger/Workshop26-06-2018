@@ -42,6 +42,10 @@ html, body {
     text-align: left;
 }
 
+#header li div span {
+    display: block;
+}
+
 #header li div span:hover {
     cursor: pointer;
 }
