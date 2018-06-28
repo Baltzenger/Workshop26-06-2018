@@ -18,22 +18,25 @@
 }
 
 
-try {
-
-	// connexion a la bdd 
-	$workshopbdd= new PDO('mysql:host=localhost;dbname=workshopbdd',$user,$pass);
-}
+ try {
+     $pdo = new PDO('mysql:host=localhost;port=3306;','root', '');
+     $retour["success"] = true;
+     $retour["message"] = "Connexion à la base réussie";
+ }catch(Exception $e) {
+     $retour["success"] = false;
+     $retour["message"] = "Connexion à la base échouée";
+ }
+ 
 
 ?>
 <!DOCTYPE HTML>  
 <html>
 <head>
-
+</head>
 <title> Formulaire d'inscription </title>
  <link rel="stylesheet" type="text/css" href="styleform.css">
- <link rel="stylesheet" href="w3.css"
+ <link rel="stylesheet" href="w3.css">
 <body> 
-
 <script type="text/javascript">
 
 
@@ -65,13 +68,15 @@ Mail: <br><input type="text" name="mail" id="mail" value="$mail"  required="requ
 </form>
 
 
-
+<!--
 <footer class="pieddepage w3-container">
 
    <p>  Second Workshop EPSI B2</p>
    <p>  2017-2018</p>  
-
+</footer>
+-->
 
 
 
 </body>
+<?php require ('footer.php') ?>
