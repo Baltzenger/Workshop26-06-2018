@@ -1,4 +1,6 @@
-        <?php require('menu.php') ?>
+    <?php require('menu.php') ?>
+    </head>
+    <body>
         <div id="banner">
         </div>
         <div id="content">

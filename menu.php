@@ -18,5 +18,3 @@
         <link rel="stylesheet" type="text/css" href="public/style.css">
         <link rel="stylesheet" type="text/css" href="public/w3.css">
         <script>console.log(<?php json_encode($retour)?>)</script>
-    </head>
-    <body>

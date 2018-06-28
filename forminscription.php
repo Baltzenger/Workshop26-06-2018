@@ -27,7 +27,10 @@ try {
 }
 
 ?>
-<?php require('menu.php');?>
+        <?php require('menu.php');?>
+        <link rel="stylesheet" type="text/css" href="public/styleform.css">
+    </head>
+    <body>
 
         <script type="text/javascript">
             /*
