@@ -31,37 +31,43 @@ $dbname = "workshopbdd";
  
 
 ?>
-<?php require('head.php');?>
-    </head>
-    <body>
-        <script type="text/javascript">
-            /*
-            function TogglePassword() {
-                var x = document.getElementById("password");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-            }*/
-        </script>
-        <?php require ('menu.php')?>
-        <div id="content">
-            <form method="post" action="profil.php" class="champform w3-container">
-                <label>Login: </label><br />
-                <input type="text" name="login" id="login" value="<?php echo $login ?>"  required="required"> <br />
+<!DOCTYPE HTML>  
+<html>
+<head>
+<meta charset="utf-8">	
+<?php require('head.php') ?>
+</head>
+<title> Formulaire d'inscription </title>
+<?php require ('menu.php') ?> 
+<body> 
 
-                <!-- j'ai mit le champ require pour rend obligatoire comme j'ai pas réussi a afficher le message d'erreur -->
-                <label>Password: </label><br />
-                <input type="password"  id="password" "name="password" value="<?php echo $password ?>"  required="required"> <br />
-                <label>Mail: </label><br />
-                <input type="text" name="mail" id="mail" value="<?php echo $mail ?>"  required="required"><br />
-                <input type="submit" id="Envoyer" name="Envoyer"></br>
-            </form>
-        </div>
-        <?php include ('footer.php')?>
-    </body>
-</html>
+
+<div id="content">
+<form method="post"  action="profil.php" class="champform w3-container">  
+
+
+
+Login: <br> <input type="text" name="login" id="login" value="$login"  required="required"> </br>
+
+<!-- j'ai mit le champ require pour rend obligatoire comme j'ai pas réussi a afficher le message d'erreur --> 
+Password: <br> <input type="password"   id="password" "name="password" value="$password"  required="required"> </br>
+Mail: <br><input type="text" name="mail" id="mail" value="$mail"  required="required"></br>
+<br><input type="submit" id="Envoyer" name="Envoyer"></br>
+</form>
+</div>
+
+<!--
+<footer class="pieddepage w3-container">
+
+   <p>  Second Workshop EPSI B2</p>
+   <p>  2017-2018</p>  
+</footer>
+-->
+
+
+<?php include ('footer.php')?>
+</body>
+
 <?php
 if(isset($_POST["submit"])){
 $hostname='localhost';
@@ -91,4 +97,5 @@ $mail=$_POST["mail"];
  }
 }
  
+
   ?>
