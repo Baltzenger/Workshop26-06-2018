@@ -2,12 +2,59 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
+#header {
+    background-color: #1a87ff;
+    color: #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+#header ul {
+    text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+#header li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#header li div {
+    background-color: #e8e8e8 !important;
+    text-align: left;
+}
+
+#header li div span:hover {
+    cursor: pointer;
+}
+
+#brand {
+    font-size: 40px;
+}
+
 #content {
     margin-left: 350px;
     margin-right: 350px;
-    padding-top: 20px;
-    background-color: #b8b8b8;
+    padding-top: 82px;
+    background-color: #e8e8e8;
     box-shadow: 10px 0 15px darkgray;
+    min-height: 800px;
 }
 
 #notrePlateforme  {

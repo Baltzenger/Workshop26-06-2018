@@ -27,11 +27,9 @@ try {
 }
 
 ?>
-        <?php require('menu.php');?>
-        <link rel="stylesheet" type="text/css" href="public/styleform.css">
+        <?php require('head.php');?>
     </head>
     <body>
-
         <script type="text/javascript">
             /*
             function TogglePassword() {
@@ -43,20 +41,20 @@ try {
                 }
             }*/
         </script>
-        <form method="post" action="profil.php" class="champform w3-container">
-            <label>Login: </label><br />
-            <input type="text" name="login" id="login" value="$login"  required="required"> <br />
+        <?php require ('menu.php')?>
+        <div id="content">
+            <form method="post" action="profil.php" class="champform w3-container">
+                <label>Login: </label><br />
+                <input type="text" name="login" id="login" value="<?php echo $login ?>"  required="required"> <br />
 
-            <!-- j'ai mit le champ require pour rend obligatoire comme j'ai pas réussi a afficher le message d'erreur -->
-            <label>Password: </label><br />
-            <input type="password"  id="password" "name="password" value="$password"  required="required"> <br />
-            <label>Mail: </label><br />
-            <input type="text" name="mail" id="mail" value="$mail"  required="required"><br />
-            <input type="submit" id="Envoyer" name="Envoyer"></br>
-        </form>
-        <footer class="pieddepage w3-container">
-           <p>  Second Workshop EPSI B2</p>
-           <p>  2017-2018</p>
-        </footer>
+                <!-- j'ai mit le champ require pour rend obligatoire comme j'ai pas réussi a afficher le message d'erreur -->
+                <label>Password: </label><br />
+                <input type="password"  id="password" "name="password" value="<?php echo $password ?>"  required="required"> <br />
+                <label>Mail: </label><br />
+                <input type="text" name="mail" id="mail" value="<?php echo $mail ?>"  required="required"><br />
+                <input type="submit" id="Envoyer" name="Envoyer"></br>
+            </form>
+        </div>
+        <?php include ('footer.php')?>
     </body>
 </html>
