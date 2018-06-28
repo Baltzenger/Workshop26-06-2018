@@ -18,24 +18,27 @@
 }
 
 
- try {
-     $pdo = new PDO('mysql:host=localhost;port=3306;','root', '');
-     $retour["success"] = true;
-     $retour["message"] = "Connexion à la base réussie";
- }catch(Exception $e) {
-     $retour["success"] = false;
-     $retour["message"] = "Connexion à la base échouée";
- }
+
+
+
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "workshopbdd";
+
+
  
 
 ?>
 <!DOCTYPE HTML>  
 <html>
 <head>
+<meta charset="utf-8">	
 </head>
 <title> Formulaire d'inscription </title>
- <link rel="stylesheet" type="text/css" href="styleform.css">
- <link rel="stylesheet" href="w3.css">
+ <link rel="stylesheet" type="text/css" href="public/styleform.css">
+ <link rel="stylesheet" href="public/w3.css">
 <body> 
 <script type="text/javascript">
 
@@ -62,7 +65,7 @@ function TogglePassword() {
 Login: <br> <input type="text" name="login" id="login" value="$login"  required="required"> </br>
 
 <!-- j'ai mit le champ require pour rend obligatoire comme j'ai pas réussi a afficher le message d'erreur --> 
-Password: <br> <input type="password"  id="password" "name="password" value="$password"  required="required"> </br>
+Password: <br> <input type="password"   id="password" "name="password" value="$password"  required="required"> </br>
 Mail: <br><input type="text" name="mail" id="mail" value="$mail"  required="required"></br>
 <br><input type="submit" id="Envoyer" name="Envoyer"></br>
 </form>
@@ -79,4 +82,34 @@ Mail: <br><input type="text" name="mail" id="mail" value="$mail"  required="requ
 
 
 </body>
-<?php require ('footer.php') ?>
+
+<?php
+if(isset($_POST["submit"])){
+$hostname='localhost';
+$username='root';
+$password=$_POST["password"];
+$login=$_POST["login"];
+$mail=$_POST["mail"];
+
+ try {
+     $pdo = new PDO('mysql:host=localhost;port=3306;dbname=workshopbdd',$hostname,$username,'');
+     $retour["success"] = true;
+     $retour["message"] = "Connexion à la base réussie";
+     $pdo>setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+ 	 $sql="INSERT INTO  'test' (`login`,`password`,`mail`)  VALUES ('$login','$password','$mail')";
+ 	 if($pdo->query(sql))
+ 	 {
+ 	 	echo "Donnes ajouté a la base";
+ 	}
+ 	 else
+ 	 {
+ 	 	echo "erreur, pendant traitement";
+ 	 } 
+ }catch(Exception $e) {
+     $retour["success"] = false;
+     $retour["message"] = "Connexion à la base échouée";
+ }
+}
+ 
+  ?>

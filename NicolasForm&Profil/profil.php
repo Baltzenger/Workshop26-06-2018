@@ -10,19 +10,18 @@ else
 <!DOCTYPE HTML>  
 <html>
 <head>
-
+	
+<meta charset="utf-8">
+</head>
 <title> Page de Profil  </title>
  
 
 Avatar:<img> 
 
 
+
 <br>Username: <?php echo $_POST["login"];?></br> 
-Desc: <br><input type="comment" name="description" value="$description">  
+<br><textarea  row="8"  cols="40"   name="description ">Description de l'utilisateur </textarea>
 
 
-
-</br>
-
-</head>
 <body> 
