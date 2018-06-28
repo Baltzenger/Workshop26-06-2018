@@ -9,6 +9,7 @@ html, body {
     justify-content: space-between;
     position: fixed;
     width: 100%;
+    height: 82px;
 }
 
 #header a {
@@ -52,7 +53,7 @@ html, body {
 #content {
     margin-left: 350px;
     margin-right: 350px;
-    padding-top: 82px;
+    padding: 82px 25px 90px 25px;
     background-color: #f5f5f5;
     box-shadow: 10px 0 15px darkgray;
     min-height: 800px;
@@ -64,6 +65,38 @@ html, body {
 
 h1 {
     margin-left: 30px !important;
+}
+
+h3 {
+    margin-left: 50px !important;
+}
+
+#ourValue {
+    margin: auto;
+    height:400px;
+    width: 600px;
+}
+
+#ourValue img {
+    border-radius: 50%;
+}
+
+#ourValue .value {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+}
+
+#knowledge {
+    margin-left: 6%;
+}
+
+#sharing {
+    margin-left: 12%;
+}
+
+#community {
+    margin-left: 30%;
 }
 
 #banner {

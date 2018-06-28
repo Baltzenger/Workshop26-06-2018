@@ -14,10 +14,14 @@
                         <ul>
                             <li class="w3-dropdown-hover"><span>Rubrique</span>
                                 <div class="w3-dropdown-content">
-                                    <span>Informatique</span>
-                                    <span>Domicile</span>
-                                    <span>Mécanique</span>
-                                    <span>Loisirs Créatifs</span>
+                                    <?php
+                                        $getDomains = $pdo->query("SELECT * FROM rubrique;");
+                                        while ($domains = $getDomains->fetch()){
+                                            echo '<a href="listTuto.php?rubrique='.$domains["nom_rubrique"].'">
+                                                <span>'.$domains["nom_rubrique"].'</span>
+                                            </a>';
+                                        }
+                                    ?>
                                 </div>
                             </li>
                             <li>Liste des Tutoriels</li>
